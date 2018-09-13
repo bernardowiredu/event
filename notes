@@ -1,0 +1,139 @@
+<div class="uk-section uk-padding-small">
+            <Row :gutter="16">
+                <Col span="16">
+                    <div class="status">
+                        <p class="uk-text-success">Active and running</p>
+                        <h1 class="uk-text-large">My Wedding
+                            <span class="uk-float-right" style="padding-right:10px;">
+                                <Button type="dashed" shape="circle" :size="buttonSize" icon="md-settings">Advanced Settings</Button>
+                                <Button type="dashed" shape="circle" :size="buttonSize" icon="md-trash">Delete</Button>
+                                 <Button type="dashed" shape="circle" :size="buttonSize" icon="md-close" to="/events">Cancel</Button>
+                                </span>
+                        </h1>
+
+                        <span class="uk-text-muted">Event Name</span><br><br>
+                        <div>
+                            Dar es Salam Karikoo | Tanazania<br>
+                            Monday, 19 March 2018 from 19:00 to 22:00 GMT
+                        </div>
+
+                        <el-steps :active="active" finish-status="success" simple style="margin-top: 20px; margin-right:20px;">
+                            <el-step title="Event Details">step 1 activated</el-step>
+                            <el-step title="Create Invites ">step 2 activated</el-step>
+                            <el-step title="Send Invites" > step 3 activated</el-step>
+                        </el-steps>
+
+                        <div  class="form-control">
+                            <el-form :label-position="labelPosition" label-width="100px" :model="formLabelAlign">
+                                <div v-if="active === 0">
+
+                                    <el-form-item label="Event Name">
+                                        <el-input v-model="formLabelAlign.name" placeholder="Event Name"></el-input>
+                                    </el-form-item>
+                                    <el-form-item label="Location">
+                                        <el-input v-model="formLabelAlign.region" placeholder="Event Date"></el-input>
+                                        <Button type="text" icon="md-search">Use Past Location</Button>
+                                        <Button type="text" icon="md-laptop">Online event</Button>
+                                        <Button type="text" icon="md-navigate">Enter Address</Button>
+                                    </el-form-item>
+
+                                    <el-form-item>
+                                        <el-col :span="11">
+                                            <el-input v-model="formLabelAlign.address" placeholder="Address"></el-input>
+                                        </el-col>
+                                        <el-col :span="2">&emsp;</el-col>
+                                        <el-col :span="11">
+                                            <el-input v-model="formLabelAlign.city" placeholder="City"></el-input>
+                                        </el-col>
+                                    </el-form-item>
+                                    <el-form-item label="Date/Time">
+                                        <el-date-picker v-model="formLabelAlign.value6" type="datetimerange" start-placeholder="Start Date" end-placeholder="End Date" style="width:100%">
+                                        </el-date-picker>
+                                    </el-form-item>
+                                    <el-form-item>
+                                        <div class="uk-float-right">
+                                            <Button type="primary" @click="next()" icon="md-arrow-dropright" :size="buttonSize" >Next</Button>
+                                        </div>
+
+                                    </el-form-item>
+
+
+                                </div>
+                                <div v-if="active === 1">
+                                    <el-form-item label="Attach Image">
+                                        <el-upload
+                                            class="image-uploader"
+                                            action="https://jsonplaceholder.typicode.com/posts/"
+                                            list-type="picture-card"
+                                            limit="1"
+                                            :on-preview="handlePictureCardPreview"
+                                            :on-remove="handleRemove">
+                                            <i class="el-icon-plus"></i>
+                                        </el-upload>
+                                    </el-form-item>
+                                    <el-dialog :visible.sync="dialogVisible" >
+                                        <img width="100%" :src="dialogImageUrl" alt="">
+                                    </el-dialog>
+
+                                    <el-form-item label="Message">
+                                        <el-input type="textarea" :rows="2" placeholder="Invitation Message" v-model="textarea">
+                                        </el-input>
+                                    </el-form-item>
+
+                                    <el-form-item>
+                                        <Button type="dashed" @click="prev()" icon="md-eye" :size="buttonSize" >Preview</Button>
+                                        <div class="uk-float-right">
+                                            <Button type="primary" @click="prev()" icon="md-arrow-dropleft" :size="buttonSize" >Prev</Button>
+                                            <Button type="primary" @click="next()" icon="md-arrow-dropright" :size="buttonSize" >Next</Button>
+                                        </div>
+                                    </el-form-item>
+
+                                </div>
+
+                                <div v-if="active === 2">
+                                    <el-form-item label="Add contacts">
+                                        <Button type="dashed" :size="buttonSize" icon="md-person">
+                                            Click to add contacts
+                                        </Button>
+                                        <Button type="dashed" :size="buttonSize" icon="md-people">
+                                            Click to add groups
+                                        </Button>
+                                    </el-form-item>
+                                    <el-form-item>
+                                        <div class="uk-float-right">
+                                            <Button type="primary" @click="prev()" icon="md-arrow-dropleft" :size="buttonSize" >Prev</Button>
+                                            <Button type="success" @click="next()" icon="md-send" :size="buttonSize" >Send Invitation</Button>
+                                        </div>
+                                    </el-form-item>
+                                </div>
+                            </el-form>
+                        </div>
+                    </div>
+                </Col>
+                <Col span="8" style="border-left:1px solid #f2f2f2; height:97vh;">
+                    <div class="status-info">
+                        <h3 class="info-bottom">Event Details <span class="uk-float-right"><Button type="dashed" shape="circle">Tips</Button></span></h3>
+                        <!--<Icon type="md-paper" size="30"/>-->
+                        <hr>
+                        <div class="info-header">
+                            <Pie></Pie>
+                            <p class="uk-text-muted uk-text-center" style="padding-top:7px;"> <b> Insight:</b> 67 Contacts attending this event so far</p>
+                        </div>
+                        <center><hr class="uk-divider-small"></center>
+                        <div class="">
+                            <br>
+                            <h5 class="uk-text-light">Invitation
+                                <span class="uk-float-right uk-text-small uk-text-primary">Updated 3 seconds</span>
+                            </h5>
+                            <Table stripe :columns="columns1" :data="data1"></Table>
+                            <br>
+                            <!--@on-change="change"-->
+                            <h5>Activate Auto Appreciation <span class="uk-float-right"><i-switch v-model="switch1"  /></span></h5>
+                            <span class="uk-text-muted">Automatically thank friends for turning up to this event</span>
+                        </div>
+
+                    </div>
+
+                </Col>
+            </Row>
+

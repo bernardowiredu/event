@@ -1,0 +1,65 @@
+
+//sidebar css
+
+aside {
+    width:250px;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1;
+    overflow-x:hidden;
+    background:#ffffff;
+}
+aside .logo a{
+    display:block;
+    padding: 25px 40px 25px 40px;
+}
+aside nav li a {
+
+    display:block;
+    color:#515a6e;
+    text-decoration:none;
+    padding: 15px 40px 15px 40px;
+    font-size:16px;
+    line-height: 15px;
+}
+aside nav li a:hover{
+    text-decoration:none;
+    color:#ffffff;
+    background: #619fe8;
+
+}
+aside nav li a:active,
+aside nav li a:focus{
+    text-decoration:none;
+    background: #619fe8;
+    color:#ffffff;
+}
+.bottom-links{
+   position: absolute;
+   bottom:35px;
+    right:0;
+    left:0;
+    color:#666;
+}
+.bottom-links a{
+    text-decoration:none;
+}
+
+.bottom-links li a:hover, .bottom-links li a:active, .bottom-links li a:focus{
+    text-decoration:none;
+    background:none;
+    color:#4a4a4a;
+}
+
+.funds{
+    padding-left:40px;
+    color:#A6A6A6;
+}
+
+.subscribed{
+    padding-left:40px;
+    padding-bottom:10px;
+    color:#A6A6A6;
+}
