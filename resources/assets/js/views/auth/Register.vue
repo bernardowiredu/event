@@ -10,21 +10,8 @@
             <div class="uk-grid-small uk-child-width-expand@s" uk-grid>
                 <div class="uk-padding-large uk-visible@l">
                     <div>
-                        <RadioGroup v-model="vertical" vertical>
-                            <Radio label="apple">
-                                <Icon type="social-apple"></Icon>
-                                <span>Apple</span>
-                                <p></p>
-                            </Radio>
-                            <Radio label="android">
-                                <Icon type="social-android"></Icon>
-                                <span>Android</span>
-                            </Radio>
-                            <Radio label="windows">
-                                <Icon type="social-windows"></Icon>
-                                <span>Windows</span>
-                            </Radio>
-                        </RadioGroup>
+                        <img  :src="'../images/lovers.svg'" alt="lovers" class="image-holder">
+                        <h4 class="padding-xsmall uk-text-center padding-left-large text-light">Invite your  friends to your event at the comfort of your home</h4>
                     </div>
                 </div>
                 <div class="form-holder">
@@ -70,7 +57,6 @@
                                     </div>
                                 </Form><br>
                                 <div class="padding-xsmall">
-                                    <Button type="success" size="large" class="form-holder" long> Already have an account? </Button>
                                 </div>
                             </div>
                         </div>
