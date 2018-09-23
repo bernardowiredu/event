@@ -13,6 +13,6 @@
 
 Route::get('/', 'AppController@app')->name('home');
 
-Route::get('/{name}', 'AppController@app')->where('name', '[A-Za-z]+');
+Route::get('/{name?}', 'AppController@app')->where('name', '^(?!storage).*$');
 
-Route::get('/{name}/{child}', 'AppController@app')->where('name', '[A-Za-z]+');
+Route::get('/{name}/{child}', 'AppController@app')->where('name', '^(?!storage).*$');

@@ -10,8 +10,8 @@
             <div class="uk-grid-small uk-child-width-expand@s" uk-grid>
                 <div class="uk-padding-large uk-visible@l">
                     <div>
-                        <img  :src="'../images/lovers.svg'" alt="lovers" class="image-holder">
-                        <h4 class="padding-xsmall uk-text-center padding-left-large text-light">Invite your  friends to your event at the comfort of your home</h4>
+                        <!--<img  :src="'../images/lovers.svg'" alt="lovers" class="image-holder">-->
+                        <h5 class="padding-xsmall uk-text-center padding-left-large text-light">Invite your  friends to your event at the comfort of your home</h5>
                     </div>
                 </div>
                 <div class="form-holder">
@@ -57,6 +57,7 @@
                                     </div>
                                 </Form><br>
                                 <div class="padding-xsmall">
+                                    <Button type="success" size="large" class="form-holder" long to="/login"> Already have an account ? </Button>
                                 </div>
                             </div>
                         </div>
@@ -92,6 +93,7 @@
         height:100vh;
         width:100%;
         background:#fff;
+        /*position:relative;*/
     }
     .uk-navbar-container{
         border:1px solid #f5f5f5;
@@ -141,6 +143,13 @@
             margin-left:90px;
             padding-top:20px;
         }
+
+        .wrapper-login{
+            height:auto;
+        }
+        .footer{
+            display:none;
+        }
     }
     @media screen and (max-width: 600px){
         .form-holder{
@@ -148,7 +157,7 @@
         }
 
         .wrapper-login{
-            height:auto;
+            height:100%;
             position:relative;
         }
     }
@@ -160,8 +169,11 @@
         .form-headers{
             margin-left:150px
         }
-        .forgotten{
-            margin-left:150px;
+        .footer{
+            position:relative
+        }
+        .wrapper-login{
+            height:auto;
         }
     }
     @media screen and (device-width:960px) {
@@ -172,10 +184,6 @@
 
         .form-headers {
             margin-left: 150px
-        }
-
-        .forgotten {
-            margin-left: 150px;
         }
 
         .footer {

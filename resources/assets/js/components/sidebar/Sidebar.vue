@@ -6,8 +6,8 @@
           </div>
           <nav>
               <li><router-link to="/" class="nav-link" active-class="active">Dashboard </router-link></li>
-              <li><router-link to="/events" active-class="active">Events <span class="uk-float-right"><Icon type="md-arrow-dropdown"/></span></router-link></li>
-              <li><a href="">Analytics <span class="uk-float-right"><Icon type="md-arrow-dropdown"/></span></a></li>
+              <li><router-link to="/event" active-class="active">Events <span class="uk-float-right"><Icon type="md-arrow-dropdown"/></span></router-link></li>
+              <li><router-link to="/analytics">Analytics</router-link></li>
               <li><a href="">Settings</a></li>
               <li><router-link to="/contacts" active-class="active">Contacts <span class="uk-float-right"><span class="uk-text-muted" style="font-size:13px;"> <Icon type="md-person-add" /> 245 Added</span>
               </span></router-link></li>

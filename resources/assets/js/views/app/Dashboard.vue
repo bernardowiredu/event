@@ -17,7 +17,7 @@
                     <img class="svg-holder" :src="'../images/svg/008-newspaper.svg'">
                     <div class="uk-hidden@s">
                         <h5 class="uk-text-strong">No Events have been created</h5>
-                        <p style="padding-left:10px; padding-right:10px;">Create and invite friends or contacts to your events without hassle</p><br>
+                        <p style="padding-left:15px; padding-right:15px; margin-right:5px;">Create and invite friends or contacts to your events without hassle</p><br>
                     </div>
                     <div class="uk-visible@m">
                         <h4 class="uk-text-strong" >No Events have been created</h4>

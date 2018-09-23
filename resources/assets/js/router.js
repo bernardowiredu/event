@@ -5,12 +5,14 @@ import routes from '~/routes'
 
 Vue.use(VueRouter)
 
-//creating a vue router object
+//creating and exporting a new router object
 
 const router  = new VueRouter(
 
     {
         mode:'history',
+        history:true,
+        base: '/',
         routes,
 
 

@@ -41,7 +41,7 @@
                                     </div>
                                     <div class="uk-width-1-2">
                                         <FormItem>
-                                            <Button type="primary" size="large" long>Sign in</Button>
+                                            <Button type="primary" size="large" long to="/">Sign in</Button>
                                         </FormItem>
                                     </div>
                                   </div>
@@ -50,7 +50,7 @@
                                      <router-link to="/forgotten"> Forgotten Password ?</router-link>
                                  </span>
                                  <div class="padding-xsmall">
-                                     <Button type="success" size="large" class="form-holder" long> Create a new account </Button>
+                                     <Button type="success" size="large" class="form-holder" long to="/register"> Create a new account </Button>
                                  </div>
                             </div>
                         </div>

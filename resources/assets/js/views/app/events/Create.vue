@@ -10,19 +10,29 @@
 
                             <h1 v-if="active === 0" class="padding-medium"> Event Details
                                 <span class="uk-float-right uk-visible@m ">
-                                      <Button type="dashed" icon="md-settings" :size="buttonSize" shape="circle">Advanced Settings</Button>
-                                      <Button type="dashed" to="/events" icon="md-close" :size="buttonSize" shape="circle">Cancel</Button>
+                                      <Button type="dashed" to="/event" icon="md-settings" :size="buttonSize" shape="circle">Advanced Settings</Button>
+                                      <Button type="dashed" to="/event" icon="md-close" :size="buttonSize" shape="circle">Cancel</Button>
                                  </span>
-                                <span class="uk-float-left uk-hidden@s padding-xsmall">
-                                      <Button type="dashed" icon="md-settings" :size="buttonSize" shape="circle">Advanced Settings</Button>
-                                      <Button type="dashed" icon="md-close" :size="buttonSize" shape="circle">Cancel</Button>
-                                 </span>
+                                <span>
+                                     <a class="uk-float-right uk-hidden@l nav-icon" href="#offcanvas-usage" uk-toggle><Icon type="md-menu" color="#4a4a4a"/></a>&emsp;&emsp;
+                                    <div id="offcanvas-usage" uk-offcanvas="flip: true; overlay: true; bg-close:true;">
+                                    <div class="uk-offcanvas-bar">
+
+                                        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+                                        <h3>Title</h3>
+
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                                    </div>
+                                </div>
+                                </span>
                             </h1>
 
                             <h1 v-if="active === 1" class="padding-medium"> Create Invitation
                                 <span class="uk-float-right uk-visible@m ">
                                       <Button type="dashed" icon="md-settings" :size="buttonSize" shape="circle">Advanced Settings</Button>
-                                      <Button type="dashed" to="/events" icon="md-close" :size="buttonSize" shape="circle">Cancel</Button>
+                                      <Button type="dashed" to="/event" icon="md-close" :size="buttonSize" shape="circle">Cancel</Button>
                                  </span>
                                 <span class="uk-float-left uk-hidden@s padding-xsmall">
                                       <Button type="dashed" icon="md-settings" :size="buttonSize" shape="circle">Advanced Settings</Button>
@@ -33,7 +43,7 @@
                             <h1 v-if="active === 2" class="padding-medium"> Invite Contacts
                                 <span class="uk-float-right uk-visible@m ">
                                       <Button type="dashed" icon="md-settings" :size="buttonSize" shape="circle">Advanced Settings</Button>
-                                      <Button type="dashed" to="/events" icon="md-close" :size="buttonSize" shape="circle">Cancel</Button>
+                                      <Button type="dashed" to="/event" icon="md-close" :size="buttonSize" shape="circle">Cancel</Button>
                                  </span>
                                 <span class="uk-float-left uk-hidden@s padding-xsmall">
                                       <Button type="dashed" icon="md-settings" :size="buttonSize" shape="circle">Advanced Settings</Button>
@@ -232,10 +242,11 @@
 
 <script>
     import Test from  'Views/app/Test.vue'
+    import Navbar from 'Components/events/navbar/Navbar.vue'
     export default {
         name: "Create",
         components:{
-            Test
+            Test,Navbar
         },
         data() {
             return {
@@ -326,6 +337,11 @@
 
     .padding-custom{
         padding:20px 30px 20px 30px;
+    }
+    @media screen and (max-width:600px){
+        .padding-custom{
+            padding:6px 16px 6px 16px;
+        }
     }
     .uk-info{
         border-left: 1px dashed #eaeaea;
