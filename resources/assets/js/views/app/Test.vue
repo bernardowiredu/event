@@ -33,6 +33,9 @@
         <Modal title="View Image" v-model="visible">
             <img :src="'https://o5wwk8baw.qnssl.com/' + imgName + '/large'" v-if="visible" style="width: 100%">
         </Modal>
+        <!--<div  uk-lightbox="animation: fade" v-model="visible">-->
+            <!--<a :href="'https://o5wwk8baw.qnssl.com/' + imgName + '/large'" v-if="visible"></a>-->
+        <!--</div>-->
     </div>
 </template>
 

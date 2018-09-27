@@ -13,7 +13,11 @@ let EventPayments = require('Views/app/events/EventPayments.vue')
 let EventReminders =  require('Views/app/events/EventReminders.vue')
 let EventAttendees  =  require('Views/app/events/EventAttendees.vue')
 let Analytics =  require('Views/app/Analytics.vue')
+let Settings = require('Views/app/Settings.vue')
 
+//mocks UI
+let CreateBoard = require('Views/storyboards/Create.vue')
+let Remind = require('Views/storyboards/Remind.vue')
 export default [
 
     {
@@ -89,6 +93,21 @@ export default [
         path:'/analytics',
         component: Analytics,
         name:'analytics'
+    },
+    {
+        path:'/settings',
+        component: Settings,
+        name:'settings'
+    },
+    {
+        path:'/createboard',
+        component: CreateBoard,
+        name:'createboard'
+    },
+    {
+        path:'/remind',
+        component: Remind,
+        name:'remind'
     }
 
 ]

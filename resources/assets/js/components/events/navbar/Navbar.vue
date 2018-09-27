@@ -20,7 +20,7 @@
                 <!--</ul>-->
             <!--</div>-->
         </nav>
-        <nav class="uk-navbar-container uk-hidden@s" style=" height:70px;" uk-navbar>
+        <nav class="uk-navbar-container uk-navbar-mobile uk-hidden@s" style=" height:70px;" uk-navbar>
             <div class="uk-navbar-left">
 
                 <ul class="uk-navbar-nav">
@@ -51,11 +51,17 @@
     .uk-navbar-nav li a {
         text-transform: capitalize;
         font-size:15px;
-
+        /*color:#fff;*/
 
     }
+    .uk-navbar-mobile{
+        background:#619fe8;
+    }
+    .uk-navbar-mobile li a {
+        color:#fff;
+    }
     .uk-navbar{
-        background:none;
+        background:#fff;
     }
     .icon-mv{
         margin-bottom:7px;
@@ -64,6 +70,6 @@
        color: #515a6e
     }
     .uk-text-white{
-
+        /*color:#fff;*/
     }
 </style>

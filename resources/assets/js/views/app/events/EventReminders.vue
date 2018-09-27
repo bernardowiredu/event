@@ -35,7 +35,7 @@
                                     </span>
 
                                         <h5 class="text-info">Event Details</h5>
-                                        <hr>
+                                        <hr style="border:1px dashed #f5f5f5;">
                                         <FormItem label="Event name">
                                             <Input v-model="input"  size="large"  placeholder="Enter something..." clearable></Input>
                                         </FormItem>
@@ -43,14 +43,14 @@
                                             <Input v-model="input"  size="large"  placeholder="Enter something..." clearable></Input>
                                         </FormItem>
                                         <h5 class="text-info">Reminder Message</h5>
-                                        <hr>
+                                        <hr style="border:1px dashed #f5f5f5;">
                                         <FormItem label="Add Reminder Message">
                                             <Input v-model="value5" type="textarea" placeholder="Enter something..." />
                                             <span><Button type="text" icon="md-image">Add image</Button></span>
                                         </FormItem>
 
                                         <h5 class="text-info">Date ,Time and Frequency</h5>
-                                        <hr>
+                                        <hr style="border:1px dashed #f5f5f5;">
                                         <p class="padding-xsmall padding-bottom-small">
                                             Select date to start reminding your invitees
                                         </p>

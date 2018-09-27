@@ -192,7 +192,7 @@
             </div>
             <!--modal-->
             <div id="modal-close-outside" uk-modal>
-                <div class="uk-modal-dialog uk-modal-body">
+                <div class="uk-modal-dialog uk-modal-body uk-border-rounded">
                     <button class="uk-modal-close-default" type="button" uk-close></button>
                     <h4 class="uk-text-army padding-bottom-small">Helpful Tips</h4>
                     <hr>

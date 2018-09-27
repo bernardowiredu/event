@@ -7,6 +7,53 @@
             <Navbar name="Event Charges"  icon="md-card"></Navbar>
             <!---->
             <div class="uk-section padding-custom">
+                <ul class="uk-breadcrumb uk-text-army">
+                    <li><a href="">Events</a></li>
+                    <li><a href="" class="active">Party</a></li>
+                    <li><span>Charges</span></li>
+                </ul>
+                <br>
+                <h4 class="text-light">Total Cost: <span class="uk-text-strong">GHS 32.00</span></h4><br>
+                <Button> Print receipt</Button>
+                <div class="uk-grid-small uk-grid-match uk-child-width-expand  padding-xsmall" uk-grid>
+                    <div>
+                        <div class="uk-overflow-auto padding-top-medium">
+                            <table class="uk-table uk-table-small uk-table-striped uk-table-hover uk-table-middle uk-table-divider">
+                                <caption>Attendees</caption>
+                                <thead class="">
+                                <tr>
+                                    <th>Item Name</th>
+                                    <th>Total cost</th>
+                                    <th>Closed on</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Invitation</td>
+                                    <td>GHS 27.00</td>
+                                    <td>13-04-2018</td>
+                                </tr>
+                                <tr>
+                                    <td>Reminders</td>
+                                    <td>GHS 29.00</td>
+                                    <td>13-04-2018</td>
+                                </tr>
+                                <tr>
+                                    <td>Reminders</td>
+                                    <td>GHS 29.00</td>
+                                    <td>13-04-2018</td>
+                                </tr><tr>
+                                    <td>Reminders</td>
+                                    <td>GHS 29.00</td>
+                                    <td>13-04-2018</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                    </div>
+                    <div>
+                    </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

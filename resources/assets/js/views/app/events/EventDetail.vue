@@ -100,7 +100,7 @@
                                 <br>
                                 <h5 class="uk-text-strong">Event Updates <span class="uk-float-right uk-text-muted text-small"> <Icon type="md-sync" /> updated seconds ago</span></h5>
                                 <div class="uk-overflow-auto padding-xsmall">
-                                    <table class="uk-table uk-table-striped uk-table-hover uk-table-middle uk-table-divider">
+                                    <table class="uk-table uk-table-small uk-table-striped uk-table-hover uk-table-middle uk-table-divider">
                                         <thead class="table-classic">
                                         <tr>
                                             <th>Contact</th>
@@ -154,7 +154,7 @@
                                 <br>
                                 <h5 class="uk-text-strong">Traffic by delivery <span class="uk-float-right uk-text-muted text-small"> <Icon type="md-sync" /> updated seconds ago</span></h5>
                                 <div class="uk-overflow-auto padding-xsmall">
-                                    <table class="uk-table uk-table-striped uk-table-hover uk-table-middle uk-table-divider">
+                                    <table class="uk-table uk-table-small uk-table-striped uk-table-hover uk-table-middle uk-table-divider">
                                         <thead class="table-classic">
                                         <tr>
                                             <th>Category</th>
@@ -273,7 +273,7 @@
         height:auto;
         position:relative;
         margin-top:15px;
-        /*border-radius: 10px;*/
+        border-radius: 10px;
 
     }
     @media  screen and (max-width: 600px) {

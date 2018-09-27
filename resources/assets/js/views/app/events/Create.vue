@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="uk-container">
-
+            <ActivityBar title="Create Event" class="uk-hidden@s"></ActivityBar>
             <div class="uk-section padding-custom">
 
                 <div class="uk-grid-small uk-grid-match uk-child-width-expand" uk-grid>
@@ -14,7 +14,7 @@
                                       <Button type="dashed" to="/event" icon="md-close" :size="buttonSize" shape="circle">Cancel</Button>
                                  </span>
                                 <span>
-                                     <a class="uk-float-right uk-hidden@l nav-icon" href="#offcanvas-usage" uk-toggle><Icon type="md-menu" color="#4a4a4a"/></a>&emsp;&emsp;
+                                     <!--<a class="uk-float-right uk-hidden@l nav-icon" href="#offcanvas-usage" uk-toggle><Icon type="md-menu" color="#4a4a4a"/></a>&emsp;&emsp;-->
                                     <div id="offcanvas-usage" uk-offcanvas="flip: true; overlay: true; bg-close:true;">
                                     <div class="uk-offcanvas-bar">
 
@@ -161,7 +161,7 @@
 
                                     </FormItem>
                                     <FormItem label="Invitation Message">
-                                        <Input  :spellcheck="spellCheck" v-model="formValidate.daescription" type="textarea" placeholder="Enter something..." />
+                                        <Input  :spellcheck="spellCheck" v-model="formValidate.description" type="textarea" placeholder="Enter something..." />
                                     </FormItem>
                                     <FormItem>
                                         <div>
@@ -242,11 +242,11 @@
 
 <script>
     import Test from  'Views/app/Test.vue'
-    import Navbar from 'Components/events/navbar/Navbar.vue'
+    import ActivityBar from 'Components/topbar/ActivityBar.vue'
     export default {
         name: "Create",
         components:{
-            Test,Navbar
+            Test, ActivityBar
         },
         data() {
             return {
